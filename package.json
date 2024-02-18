@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "env-cmd -f .env.local next dev",
+    "build:dev": "env-cmd -f .env.dev next build",
+    "build:prod": "env-cmd -f .env.prod next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "env-cmd": "^10.1.0",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"
